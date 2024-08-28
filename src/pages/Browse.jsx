@@ -1,13 +1,12 @@
 import VideoContainer from "../components/VideoContainer";
 import useNowPlayingMovies from "../hooks/useNowPlayingMovies";
-import NowPlayingSlider from "../components/NowPlayingSlider";
-
+import TrendingMovies from '../components/TrendingMovies';
 const Browse = () => {
     useNowPlayingMovies();
     return (
         <>
         <VideoContainer/>
-        <NowPlayingSlider/>
+        <TrendingMovies/>
         </>
     )
 }

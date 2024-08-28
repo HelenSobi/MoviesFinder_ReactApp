@@ -4,10 +4,8 @@ import { createBrowserRouter,RouterProvider } from "react-router-dom";
 import { Provider } from 'react-redux';
 import appStore from './store/appStore';
 import App from './App'
-import Home from './pages/Home';
 import Browse from './pages/Browse'
 import Movies from './pages/Movies'
-import Login from './components/Login';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import './index.css'

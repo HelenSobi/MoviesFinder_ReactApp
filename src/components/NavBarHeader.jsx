@@ -82,7 +82,7 @@ const NavBarHeader = () => {
             </Link>
           </div>
           </>) : 
-          (<button onClick={openModal} className=" inline-block  px-6 md:px-12 py-3 text-xl font-medium text-red-600 shadow hover:text-red-700  active:bg-red-500 sm:w-auto">Login</button> )
+          (<button onClick={openModal} className=" inline-block  px-6 md:px-12 py-3 text-xl font-medium text-red-600 shadow hover:text-red-700 sm:w-auto">Login</button> )
         }     
             { isModalOpen ? <Modal onClose={closeModal} /> : null } 
             </div>

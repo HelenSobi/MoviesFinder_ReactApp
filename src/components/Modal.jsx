@@ -9,7 +9,6 @@ import { useNavigate } from "react-router-dom";
 const Modal = ({onClose }) => {
   const [isLogin, setIsLogin] = useState(true);
   const [isError, setIsError] = useState("");
-  const [bgNoScroll, setBgNoScroll] = useState("");
   const fname = useRef(null);
   const email = useRef(null);
   const password = useRef(null);
@@ -67,6 +66,7 @@ const Modal = ({onClose }) => {
     }
 
   },[]);
+  // body no scrolling while modal opens
 
   return (
     <div className={`fixed inset-0 flex items-center justify-center z-50`}>
@@ -88,7 +88,7 @@ const Modal = ({onClose }) => {
         {!isLogin && <input type="text" ref={fname} placeholder="Name" className="placeholder-gray-500 rounded text-white bg-transparent border-[1px] border-zinc-700 focus:border-slate-500 focus:ring-0 focus:outline-none p-4 mb-8"/>}
         <input type="text" ref={email} placeholder="name@email.com" className="placeholder-gray-500 rounded text-white bg-transparent border-[1px] border-zinc-700 focus:border-slate-500 focus:ring-0 focus:outline-none p-4 mb-8"/>
         <input type="password" ref={password} placeholder="Password" className="placeholder-gray-500 rounded text-white bg-transparent border-[1px] border-zinc-700  focus:border-slate-500 focus:ring-0 focus:outline-none p-4 mb-8"/>
-        <p className="text-red-700 text-sm mb-4">{isError}</p>
+        <p className="text-red-700 text-sm mb-4 text-left">{isError}</p>
         <button onClick={handleClick} className="transition-all duration-500 bg-red-700 hover:bg-red-900 hover:text-white py-2 px-4 rounded  text-white mb-8">{isLogin ? "Login" : "Register"}</button>
         <p className="text-stone-300 cursor-pointer text-left" onClick={toggleForm}>
         {isLogin ? (

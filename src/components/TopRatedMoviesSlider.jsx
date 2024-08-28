@@ -1,15 +1,11 @@
 import Slider from "react-slick";
-import {useSelector} from 'react-redux';
+import { useSelector } from 'react-redux';
 import SliderCard from './SliderCard';
 import settings from "../constants/constants_slider";
-import useTopRatedMovies from "../hooks/useTopRatedMovies";
 
 const TopRatedMoviesSlider = () => {
     const movies=useSelector(store => store.movies?.topRatedMovies);
-    if (!movies || !Array.isArray(movies) || movies.length === 0) {
-        console.warn("No movies data available to display."); // Debugging warning
-        return null;
-    }
+    if (!movies || !Array.isArray(movies) || movies.length === 0) return null;
     return (
         <>
         <div className="py-4 px-8">
