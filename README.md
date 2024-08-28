@@ -70,7 +70,7 @@ create `firebase.jsx` file and copy `firebaseConfig` from the firebase console
     deploys
     2. Use an existing project
     3. What do you want to use as your public directory? dist
-    4.Configure as a single-page app (rewrite all urls to /index.html)? No
+    4.Configure as a single-page app (rewrite all urls to /index.html)? yes
     5. Set up automatic builds and deploys with GitHub? No
     firebase.json file created
 
@@ -79,3 +79,4 @@ create `firebase.jsx` file and copy `firebaseConfig` from the firebase console
 
 ### App hosted at 
 
+`https://movies-finder-2024.web.app/`
