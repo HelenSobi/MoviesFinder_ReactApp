@@ -51,7 +51,7 @@ node_modules/
 dist
 
 #reference file 
-Reference.md
+reference
 # Optional npm cache directory
 .npm
 
