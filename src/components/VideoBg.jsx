@@ -18,12 +18,14 @@ const VideoBg = ({ movieId}) => {
           allowFullScreen 
           referrerPolicy="strict-origin-when-cross-origin"
         ></iframe>
-        {/* to get looping work: Add video ID another time as playlist value! */}
-        {/* Overlay that darkens the video background  
-        bug ******* check for small screen*/}
+       
         <div className="absolute inset-0 bg-black opacity-40 md:opacity-70"></div>
       </div>
   );
 }
 
 export default VideoBg;
+
+{/* /* to get looping work: Add video ID another time as playlist value! *
+        /* Overlay that darkens the video background  
+        bug ******* check for small screen*/ }

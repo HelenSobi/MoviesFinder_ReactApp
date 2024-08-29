@@ -6,7 +6,7 @@ import appStore from './store/appStore';
 import App from './App'
 import Browse from './pages/Browse'
 import Movies from './pages/Movies'
-import MovieMoreInfo from './pages/MovieMoreInfo';
+import MovieInfo from './pages/MovieInfo';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import './index.css'
@@ -31,7 +31,7 @@ const router=createBrowserRouter([
       },
       {
         path:"/movie/:id",
-        element:<MovieMoreInfo/>,
+        element:<MovieInfo/>,
       },
     ]
   },

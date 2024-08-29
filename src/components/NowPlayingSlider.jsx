@@ -15,7 +15,7 @@ const NowPlayingSlider = () => {
         <div className="px-8">
         <Slider {...settings}>
             {movies.map((card)=>(
-                <SliderCard key={card.id} imageId={card.poster_path} title={card.title} rel_date={card.release_date}/>
+                <SliderCard key={card.id} movieId={card.id} imageId={card.poster_path} title={card.title} rel_date={card.release_date}/>
             ))}
         </Slider>
         </div>

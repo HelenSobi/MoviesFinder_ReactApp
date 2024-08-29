@@ -47,7 +47,7 @@ const NavBarHeader = () => {
   return (
     
       <header className={` z-50 w-full bg-black`}>
-        <nav className={`flex flex-wrap items-center justify-between p-3 ${isOpen && "bg-black"}`}>
+        <nav className={`flex flex-wrap items-center justify-between p-3  ${isOpen && "bg-black h-full"}`}>
           <Link to="/home" className="flex items-center">
             <img src="/logo.png" className="w-48 md:w-60" alt="Logo" />
           </Link>
