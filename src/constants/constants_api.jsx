@@ -10,6 +10,8 @@ export const API_OPTIONS = {
 
 export const MOVIE_TRAILER = "https://api.themoviedb.org/3/movie/";
 
+export const MOVIE_INFO = "https://api.themoviedb.org/3/movie/";
+
 export const NOW_PLAYING_URL = "https://api.themoviedb.org/3/movie/now_playing?language=en-US&page=1";
 
 export const POPULAR_URL = "https://api.themoviedb.org/3/movie/popular?language=en-US&page=1";

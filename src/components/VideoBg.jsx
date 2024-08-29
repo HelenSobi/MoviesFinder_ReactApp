@@ -10,7 +10,7 @@ const VideoBg = ({ movieId}) => {
       <div className="absolute inset-0 aspect-video z-30">
         {/* Wrapper for the video background */}
         <iframe 
-          className="block object-cover object-center h-[300px] w-full md:w-full md:h-full bg-transparent opacity-90" 
+          className="md:block md:object-cover md:object-center h-full w-full bg-transparent opacity-90" 
           src={`https://www.youtube.com/embed/${trailerKey}?autoplay=1&mute=1&loop=1&playlist=${trailerKey}`} 
           title="YouTube video player" 
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
