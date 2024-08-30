@@ -2,16 +2,18 @@ import { signOut,onAuthStateChanged } from "firebase/auth";
 import { useNavigate , Link} from "react-router-dom";
 import { useState, useEffect } from "react";
 import { useSelector,useDispatch } from "react-redux";
-import { auth } from '../utils/firebase'
-import { createUser,deleteUser } from "../store/userSlice";
-import Modal from './Modal.jsx';
+import { auth } from '../utils/firebase.jsx'
+import { createUser,deleteUser } from "../store/userSlice.jsx";
+import Modal from '../components/Modal.jsx';
 
-const NavBarHeader = () => {
+const PageHeader = () => {
   const [isOpen, setIsOpen] = useState(false);    //hamburger button
   const [isModalOpen, setIsModalOpen] = useState(false);
   const navigate=useNavigate();
   const dispatch=useDispatch();
-  const user=useSelector((store) => store.user);   // Check if the current path is '/movies'
+
+  const user=useSelector((store) => store.user);
+
     useEffect(()=>{
         const unsubscribe = onAuthStateChanged(auth, (user) => {    //firebase utility
         if (user) {    // User is signed in
@@ -46,10 +48,10 @@ const NavBarHeader = () => {
 
   return (
     
-      <header className={` z-50 w-full bg-black`}>
-        <nav className={`flex flex-wrap items-center justify-between p-3  ${isOpen && "bg-black h-full"}`}>
+      <header className={`absolute z-50 w-full bg-black`}>
+        <nav className={`flex flex-wrap items-center justify-between p-3 ${isOpen && "bg-black"}`}>
           <Link to="/home" className="flex items-center">
-            <img src="/logo.png" className="w-48 md:w-60" alt="Logo" />
+            <img src="./logo.png" className="w-48 md:w-60" alt="Logo" />
           </Link>
           <div className="block md:hidden">
             <button
@@ -99,4 +101,4 @@ const NavBarHeader = () => {
   );
 };
 
-export default NavBarHeader;
+export default PageHeader;

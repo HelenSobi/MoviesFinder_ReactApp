@@ -6,7 +6,7 @@ import {formValidate} from '../utils/validate';
 import {createUser} from '../store/userSlice';
 import { useNavigate } from "react-router-dom";
 
-const Modal = ({onClose }) => {
+const Modal = ({ isOpen, closeModal }) => {
   const [isLogin, setIsLogin] = useState(true);
   const [isError, setIsError] = useState("");
   const fname = useRef(null);
@@ -35,7 +35,7 @@ const Modal = ({onClose }) => {
                   const {uid, email, displayName} = auth.currentUser;
                   dispatch(createUser({uid:uid,email:email, displayName:displayName})); 
                   navigate("/");
-                  onClose();
+                  closeModal();
                 }).catch((error) => {
                   console.log(error);
                 });
@@ -49,7 +49,7 @@ const Modal = ({onClose }) => {
           .then((userCredential) => {
               const user = userCredential.user;
               navigate("/");
-              onClose();
+              closeModal();
           })
           .catch((error) => {
               const errorMessage = error.message;
@@ -59,15 +59,15 @@ const Modal = ({onClose }) => {
 
   }
   
-  useEffect(()=>{
-    document.body.classList.add("overflow-hidden");
-    return ()=>{
-      document.body.classList.remove("overflow-hidden");
-    }
+  // useEffect(()=>{
+  //   document.body.classList.add("overflow-hidden");
+  //   return ()=>{
+  //     document.body.classList.remove("overflow-hidden");
+  //   }
 
-  },[]);
+  // },[]);
   // body no scrolling while modal opens
-
+  if (!isOpen) return null;
   return (
     <div className={`fixed inset-0 flex items-center justify-center z-50`}>
       <div className="fixed inset-0 bg-zinc-900 opacity-40"></div>
@@ -76,7 +76,7 @@ const Modal = ({onClose }) => {
       <form>
         <div className="flex flex-col bg-black p-6">
         <div className="flex items-center justify-between rounded-t dark:border-gray-600">
-       <button type="button" onClick={onClose}
+       <button type="button" onClick={closeModal}
         className="end-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-hide="authentication-modal">
                    <svg className="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
                        <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>

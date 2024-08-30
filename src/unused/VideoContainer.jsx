@@ -1,5 +1,5 @@
 import { useSelector } from "react-redux";
-import VideoBg from "./VideoBg";
+import VideoBg from "../components/VideoBg";
 import Loader from "../utils/Loader";
 import { Link } from "react-router-dom";
 

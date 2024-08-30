@@ -7,20 +7,15 @@ const VideoBg = ({ movieId}) => {
   if (!trailerKey) return null;
 
   return (
-      <div className="absolute inset-0 aspect-video z-30">
-        {/* Wrapper for the video background */}
-        <iframe 
-          className="md:block md:object-cover md:object-center h-full w-full bg-transparent opacity-90" 
-          src={`https://www.youtube.com/embed/${trailerKey}?autoplay=1&mute=1&loop=1&playlist=${trailerKey}`} 
-          title="YouTube video player" 
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-          frameBorder="0" 
-          allowFullScreen 
-          referrerPolicy="strict-origin-when-cross-origin"
-        ></iframe>
-       
-        <div className="absolute inset-0 bg-black opacity-40 md:opacity-70"></div>
-      </div>
+        <iframe
+        className="absolute top-0 left-0 w-full h-full"
+        src={`https://www.youtube.com/embed/${trailerKey}?autoplay=1&mute=1&loop=1`}
+        frameBorder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowFullScreen
+        title="YouTube Video Player"
+      ></iframe>
+      
   );
 }
 

@@ -1,4 +1,4 @@
-import VideoContainer from "../components/VideoContainer";
+import VideoContainer from "../unused/VideoContainer";
 import useNowPlayingMovies from "../hooks/useNowPlayingMovies";
 import TrendingMovies from '../components/TrendingMovies';
 

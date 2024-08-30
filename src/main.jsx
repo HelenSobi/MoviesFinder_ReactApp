@@ -7,6 +7,7 @@ import App from './App'
 import Browse from './pages/Browse'
 import Movies from './pages/Movies'
 import MovieInfo from './pages/MovieInfo';
+import Home from './pages/Home';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import './index.css'
@@ -19,7 +20,7 @@ const router=createBrowserRouter([
     children:[ 
       {
         path:"/",
-        element:<Browse/>,
+        element:<Home/>,
       },
       {
         path:"/home",
