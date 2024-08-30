@@ -49,7 +49,7 @@ function Header() {
         <HamburgerMenu openModal={openModal} handleSignOut={handleSignOut}/>
         <div className="hidden md:flex space-x-4">
         <Link to="/" className="hover:text-gray-400">Home</Link>
-        <Link to="/"  className="hover:text-gray-400">Movies</Link>
+        <Link to="/movies"  className="hover:text-gray-400">Movies</Link>
          
           {/* Login button in navbar */}
           {user ? (

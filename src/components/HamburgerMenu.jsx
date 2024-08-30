@@ -12,7 +12,7 @@ const HamburgerMenu = ({ openModal , handleSignOut}) => {
     <div className="relative md:hidden">
       {/* Hamburger Icon */}
       <button
-        className="p-2 text-gray-700 rounded-md focus:outline-none md:hidden"
+        className="p-2 text-gray-300 rounded-md focus:outline-none md:hidden"
         onClick={toggleMenu}
       >
         <svg
@@ -69,7 +69,7 @@ const HamburgerMenu = ({ openModal , handleSignOut}) => {
           >
             Home
           </Link>
-           <Link to ="/"
+           <Link to ="/movies"
             className="text-2xl text-white hover:text-gray-500"
             onClick={toggleMenu}
           >

@@ -1,16 +1,15 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
+import { StrictMode } from 'react';
+import { createRoot } from 'react-dom/client';
 import { createBrowserRouter,RouterProvider } from "react-router-dom";
 import { Provider } from 'react-redux';
 import appStore from './store/appStore';
-import App from './App'
-import Browse from './pages/Browse'
-import Movies from './pages/Movies'
+import App from './App';
+import Movies from './pages/Movies';
 import MovieInfo from './pages/MovieInfo';
 import Home from './pages/Home';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import './index.css'
+import './index.css';
 
 
 const router=createBrowserRouter([
@@ -21,10 +20,6 @@ const router=createBrowserRouter([
       {
         path:"/",
         element:<Home/>,
-      },
-      {
-        path:"/home",
-        element:<Browse/>,
       },
       {
         path:"/movies",

@@ -9,11 +9,9 @@ const Movies=()=>{
     useTopRatedMovies();
     return (        
         <>
-        <div className="">
         <NowPlayingSlider/>
         <PopularMoviesSlider/>
         <TopRatedMoviesSlider/>
-        </div>
         </>
     )
 }
