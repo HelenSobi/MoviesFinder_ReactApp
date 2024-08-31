@@ -34,7 +34,7 @@ const Modal = ({ isOpen, closeModal }) => {
                 }).then(() => {
                   const {uid, email, displayName} = auth.currentUser;
                   dispatch(createUser({uid:uid,email:email, displayName:displayName})); 
-                  navigate("/");
+                 // navigate("/");
                   closeModal();
                 }).catch((error) => {
                   console.log(error);
@@ -48,7 +48,7 @@ const Modal = ({ isOpen, closeModal }) => {
           signInWithEmailAndPassword(auth, email.current.value,password.current.value)
           .then((userCredential) => {
               const user = userCredential.user;
-              navigate("/");
+              //navigate("/");
               closeModal();
           })
           .catch((error) => {

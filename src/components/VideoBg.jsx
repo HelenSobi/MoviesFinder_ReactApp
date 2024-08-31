@@ -7,15 +7,9 @@ const VideoBg = ({ movieId}) => {
   if (!trailerKey) return null;
 
   return (
-        <iframe
-        className="absolute top-0 left-0 w-full h-full"
-        src={`https://www.youtube.com/embed/${trailerKey}?autoplay=1&mute=1&loop=1`}
-        frameBorder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowFullScreen
-        title="YouTube Video Player"
-      ></iframe>
-      
+      <>
+        <iframe className="absolute top-0 left-0 w-full h-full" width="100%" height="100%" src={`https://www.youtube.com/embed/${trailerKey}?autoplay=1&loop=1&mute=1&controls=0&rel=0&showinfo=0&playlist=${trailerKey}&modestbranding=1`} frameBorder="0" allowFullScreen="allowfullscreen"></iframe>
+      </>
   );
 }
 

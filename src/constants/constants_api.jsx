@@ -20,4 +20,7 @@ export const TOP_RATED_URL = "https://api.themoviedb.org/3/movie/top_rated?langu
 
 export const UPCOMING_URL = "https://api.themoviedb.org/3/movie/upcoming?language=en-US&page=1";
 
+export const SEARCH_URL = "https://api.themoviedb.org/3/search/movie?query=";
+
+export const SEARCH_END_URL = "&include_adult=false&language=en-US&page=1";
 
